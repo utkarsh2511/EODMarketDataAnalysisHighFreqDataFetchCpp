@@ -33,18 +33,6 @@ dVector operator+(const dVector &lhs, const dVector &rhs) {
     return result;
 }
 
-// dVector calculateCAARt(const dVector &lhs){
-// 	// Initialize the result vector
-//     dVector result(lhs.size());
-//     double sum = 0;
-//     // Sum corresponding elements
-//     for (size_t i = 0; i < lhs.size(); i++) {
-//         sum += lhs[i];
-//         result[i] = sum;
-//     }
-
-//     return result;
-// }
 
 dVector operator/(const dVector &lhs, const double &num) {
 	
