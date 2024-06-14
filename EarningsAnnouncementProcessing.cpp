@@ -55,35 +55,6 @@ std::string convertDate(const std::string& date) {
     return year + "-" + monthNumber + "-" + day;
 }
 
-// function to add or subtract days to "YYYY-MM-DD" formatted date
-// std::string addOrSubtractDays(const std::string& date, int days) {
-//     std::tm tm = {};
-//     std::istringstream ss(date);
-
-//     // Parse the date assuming the format YYYY-MM-DD
-//     ss >> std::get_time(&tm, "%Y-%m-%d");
-
-//     // Check if parsing was successful
-//     if (ss.fail()) {
-//         // std::cerr << "Failed to parse date" << std::endl;
-//         return "";
-//     }
-
-//     // Convert tm to time_t, then add or subtract days
-//     std::time_t time = std::mktime(&tm);
-//     const int secondsPerDay = 86400;
-//     std::time_t newTime = time + days * secondsPerDay;
-
-//     // Convert the time_t back to tm struct
-//     std::tm* newTm = std::localtime(&newTime);
-
-//     // Create a new stringstream to format the resulting date
-//     std::ostringstream result;
-//     result << std::put_time(newTm, "%Y-%m-%d");
-
-//     return result.str();
-// }
-
 bool isStockMarketHoliday(const std::tm* date) {
     // List of fixed-date holidays (month, day)
     std::vector<std::pair<int, int>> fixedHolidays = {
